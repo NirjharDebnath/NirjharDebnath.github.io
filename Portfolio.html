@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/gstev-logo.png" type="image/png">
+    <title>GSTEV Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <div id="header"></div> <!-- Header will be loaded here -->
+
+
+
+
+
+
+<!--------------------------------- EDIT FROM HERE --------------------------------------------------->   
+    
+
+
+
+
+
+    <div class="content">
+        <h1 style="text-align: center;">CONTACT US</h1> 
+        <div class="container">
+            <div class="block">
+                <h3>Address</h3>
+                <p><a href="https://maps.app.goo.gl/J7PDgYRvwpbP2AGg9">Ghoshpara Saraswati Trust Estate Vidyapith (H.S.), Kalyani Ghoshpara, Kalyani</a></p>
+
+                <h3>Phone</h3>
+                <p><a href="tel:9163523176">9163523176</a></p>
+
+                <h3>Email</h3>
+                <p><a href="mailto:gstev74@gmail.com">gstev74@gmail.com</a></p>
+
+                <h3>Social Media</h3>
+                <p>
+                    <a href="https://facebook.com/"><i class="fa fa-facebook-square" style="color: rgb(0, 0, 0); font-size: 30px; margin: 4px;"></i></a>
+                    <a href="https://twitter.com/"><i class="fa fa-twitter-square" style="color: rgb(0, 0, 0); font-size: 30px; margin: 4px;"></i></a>
+                    <a href="https://instagram.com/"><i class="fa fa-instagram" style="color: rgb(0, 0, 0); font-size: 30px; margin: 4px;"></i></a>
+                </p>
+            </div>
+            <div class="block">
+                <h3>Send Us a Message</h3>
+                <form id="contact-form">
+                    <input style="font-family: 'Poppins', sans-serif;" type="text" id="name" name="from_name" placeholder="Enter your full name" required>
+                    <input style="font-family: 'Poppins', sans-serif;" type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <textarea style="font-family: 'Poppins', sans-serif;" id="message" name="message" rows="5" placeholder="Enter your message here" required></textarea>
+                    <button style="font-family: 'Poppins', sans-serif;" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<!--------------------------------- EDIT END HERE --------------------------------------------------->
+    
+
+
+
+
+    <div id="footer"></div> <!-- Footer will be loaded here -->
+
+    <script src="header.js"></script>
+    <script>
+        // Load the header and footer HTML dynamically
+        function loadHTML(file, elementId) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                    // After the header is loaded, setup the menu
+                    if (elementId === 'header') {
+                        // You can add any additional setup steps here if needed
+                    }
+                })
+                .catch(error => console.log('Error loading file:', error));
+        }
+
+        // Load header and footer after the page is loaded
+        window.onload = function() {
+            loadHTML('header.html', 'header');
+            loadHTML('footer.html', 'footer');
+        };
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="contact.js"></script>
+
+</body>
+</html>
