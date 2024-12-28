@@ -139,12 +139,14 @@ body {
 }
 
 .footer-section p i {
+    background: transparent;
     color: black;
-    font-size: 10px;
+    font-size: 20px;
     margin-right: 10px;
 }
 
 .footer-section p a {
+    background: transparent;
     text-decoration: none;
     fonth-size: 10px;
     color: black;
