@@ -1,1 +1,143 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #dae8fa, #ffe4f8);
+}
 
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+}
+
+.container {
+    color: black;
+    padding: 50px;
+    background: radial-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(218, 233, 255, 0.5) 100%);
+    border-radius: 15px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: box-shadow 0.3s ease;
+}
+
+.container h1 {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.container img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 10px 10px 0;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.container:hover {
+    box-shadow: 0 0px 30px rgb(165, 135, 255, 1);
+}
+
+@media (max-width: 767px) {
+    .content {
+        padding:20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center images horizontally */
+        padding: 40px;
+    }
+
+    .container img {
+        margin: 0 0 10px 0;
+    }
+
+    .container h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+/* Lightbox styles */
+.lightbox {
+    position: fixed; /* Fixed positioning to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for the lightbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* The image inside the lightbox */
+#lightbox-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+}
+
+/* Navigation buttons positioning */
+#lightbox .nav {
+    position: fixed; /* Fixed positioning so they stay at the edges */
+    background: white;
+    color: black;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10001; /* Ensure they are above the modal content */
+}
+
+/* Position left and right navigation buttons */
+#lightbox .prev {
+    left: 20px; /* Positioned on the left edge */
+    top: 50%; /* Centered vertically */
+}
+
+#lightbox .next {
+    right: 20px; /* Positioned on the right edge */
+    top: 50%; /* Centered vertically */
+}
+
+/* Close button styling - positioned on the edge */
+#lightbox .close-btn {
+    position: fixed; /* Fixed positioning */
+    top: 20px; /* Distance from the top edge */
+    right: 20px; /* Distance from the right edge */
+    background: white;
+    color: black;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10000; /* Ensure it's above everything else */
+}
