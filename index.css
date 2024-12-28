@@ -112,6 +112,75 @@ body {
         height: 500px; /* Taller blocks for wider screens */
     }
 }
+.footer-section:first-child {
+    margin-right: 100px; /* Adjust this value for a larger gap */
+}
+
+.footer-section:nth-child(3) {
+    margin-right: 40px; /* Adjust this value to increase the gap */
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1 1 200px; /* Flexible width for responsiveness */
+    margin: 0; /* Reset margin for consistent alignment */
+    min-height: 150px; /* Ensures all sections are balanced in height */
+}
+
+.footer-section img {
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+}
+
+.footer-section iframe{
+    margin-top: 20px;
+}
+
+.footer-section h4, .footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer-section address, .footer-section p {
+    font-style: normal;
+    font-size: 16px;
+}
+
+.footer-section p i {
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.footer-section p a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-section p a:hover {
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
 
 @media (max-width: 767px) {
     .content {
