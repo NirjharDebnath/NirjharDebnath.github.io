@@ -141,13 +141,13 @@ body {
 .footer-section p i {
     color: black;
     font-size: 10px;
-    margin-top: 10px;
     margin-right: 10px;
 }
 
 .footer-section p a {
     text-decoration: none;
-    color: white;
+    fonth-size: 10px;
+    color: black;
 }
 
 .footer-section p a:hover {
