@@ -117,6 +117,7 @@ body {
 }
 
 .footer-section:nth-child(3) {
+    align-items: left;
     margin-right: 40px; /* Adjust this value to increase the gap */
 }
 
