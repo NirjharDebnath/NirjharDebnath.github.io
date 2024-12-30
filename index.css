@@ -82,9 +82,9 @@ body {
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    margin-top: 1px; /* Push the button to the bottom */
+    margin-top: 0px;
     transition: background-color 0.3s ease;
-    box-sizing: border-box; /* Ensures padding is included in the width */
+    /* box-sizing: border-box; Ensures padding is included in the width */
 }
 
 .back a {
