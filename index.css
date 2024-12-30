@@ -70,7 +70,7 @@ body {
     display: block;
 }
 
-.block a, .back a {
+.block a {
     display: block;
     width: 100%;
     /* padding: 15px 20px; */
@@ -87,11 +87,28 @@ body {
     box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
-/* .back a {
+.back a {
+    display: block;
+    width: 100%;
+    /* padding: 15px 20px; */
+    background-color: rgba(0, 0, 0, 1);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: auto; /* Push the button to the bottom */
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.back a {
     padding: 20px 40px;
     max-width: 500px;
     margin: auto;
-} */
+}
 
 .block a {
     background-color: transparent; /* Slightly lighter background on hover */
