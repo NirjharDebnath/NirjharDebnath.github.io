@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist Payment</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pay to Artist</title>
+    <link rel="stylesheet" href="Pay.css">
 </head>
 <body>
     <div class="payment-container">
         <div class="block">
             <h2>Pay to Artist</h2>
-            <p>Enter the details below to make the payment</p>
+            <p>Enter the amount to make the payment</p>
 
             <form id="payment-form">
-                <div class="form-group">
-                    <label for="upi-id">Artist's UPI ID</label>
-                    <input type="text" id="upi-id" placeholder="artist@upi" required>
-                </div>
-
                 <div class="form-group">
                     <label for="amount">Amount</label>
                     <input type="number" id="amount" placeholder="Enter amount in INR" required>
@@ -29,20 +24,22 @@
     </div>
 
     <script>
+        // Fixed UPI ID for the artist
+        const artistUpiId = 'nirjhardebnath2006@oksbi';  // Replace with the actual artist's UPI ID
+
         document.getElementById('payment-form').addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const upiId = document.getElementById('upi-id').value;
             const amount = document.getElementById('amount').value;
 
-            if (upiId && amount) {
-                // Redirect to UPI app for payment
-                const paymentUrl = `upi://pay?pa=${nirjhardebnath2006@oksbi}&pn=Nirjhar Debnath&mc=123456&tid=001&amt=${amount}&cu=INR&url=https://example.com`;
+            if (amount && amount > 0) {
+                // Generate UPI payment URL with fixed UPI ID and the user-entered amount
+                const paymentUrl = `upi://pay?pa=${artistUpiId}&pn=Artist&mc=123456&tid=001&amt=${amount}&cu=INR;
 
-                // Open the UPI payment app (user's UPI app will open with the details)
+                // Redirect to the UPI payment app
                 window.location.href = paymentUrl;
             } else {
-                alert('Please enter both UPI ID and amount.');
+                alert('Please enter a valid amount.');
             }
         });
     </script>
