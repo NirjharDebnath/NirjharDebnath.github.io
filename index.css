@@ -130,7 +130,7 @@ body {
     }
 
     .block {
-        height: 500px; /* Taller blocks for wider screens */
+        height: 600px; /* Taller blocks for wider screens */
     }
 }
 .footer-section:first-child {
