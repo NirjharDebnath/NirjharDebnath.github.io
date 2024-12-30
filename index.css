@@ -29,7 +29,7 @@ body {
     max-width: 600px;
     height: 400px; /* Predefined height for wider screens */
     padding: 50px;
-    background: radial-gradient(circle, #4B0082, #000000);
+    background: radial-gradient(circle, #4B0082, #FFD700);
     border-radius: 15px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(15px);
