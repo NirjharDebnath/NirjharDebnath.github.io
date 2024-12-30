@@ -4,37 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pay to Artist</title>
-    <link rel="stylesheet" href="Pay.css">
 </head>
 <body>
-    <div class="payment-container">
-        <div class="block">
-            <h2>Pay to Artist</h2>
-            <p>Enter the amount to make the payment</p>
+    <h2>Pay to Artist</h2>
+    <p>Enter the amount to make the payment</p>
 
-            <form id="payment-form">
-                <div class="form-group">
-                    <label for="amount">Amount</label>
-                    <input type="number" id="amount" placeholder="Enter amount in INR" required>
-                </div>
-
-                <button type="submit">Pay via UPI</button>
-            </form>
-        </div>
-    </div>
+    <form id="payment-form">
+        <label for="amount">Amount (INR):</label>
+        <input type="number" id="amount" placeholder="Enter amount in INR" required>
+        <button type="submit">Pay via UPI</button>
+    </form>
 
     <script>
-        // Fixed UPI ID for the artist
-        const artistUpiId = 'nirmaldebnath75@oksbi';  // Replace with the actual artist's UPI ID
-        const name = "Nirmal debnath";
+        // Fixed UPI ID for the artist (Replace with the actual UPI ID)
+        const artistUpiId = 'nirmaldebnath75@oksbi';  
+
         document.getElementById('payment-form').addEventListener('submit', function(e) {
             e.preventDefault();
 
             const amount = document.getElementById('amount').value;
 
+            // Check if the amount is valid and greater than 0
             if (amount && amount > 0) {
-                // Generate UPI payment URL with fixed UPI ID and the user-entered amount
-                const paymentUrl = `upi://pay?pa=${artistUpiId}&pn={name}&mc=123456&tid=001&amt=${amount}&cu=INR`;
+                // Generate UPI payment URL
+                const paymentUrl = `upi://pay?pa=${artistUpiId}&pn=Artist&mc=123456&tid=001&amt=${amount}&cu=INR`;
+
+                // Log the URL to ensure it's correct
+                console.log(paymentUrl);
 
                 // Redirect to the UPI payment app
                 window.location.href = paymentUrl;
@@ -43,6 +39,5 @@
             }
         });
     </script>
-
 </body>
 </html>
