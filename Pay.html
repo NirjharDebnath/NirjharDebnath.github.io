@@ -25,8 +25,8 @@
 
     <script>
         // Fixed UPI ID for the artist
-        const artistUpiId = 'mirmaldebnath75@oksbi';  // Replace with the actual artist's UPI ID
-
+        const artistUpiId = 'nirmaldebnath75@oksbi';  // Replace with the actual artist's UPI ID
+        const name = "Nirmal debnath"
         document.getElementById('payment-form').addEventListener('submit', function(e) {
             e.preventDefault();
 
@@ -34,7 +34,7 @@
 
             if (amount && amount > 0) {
                 // Generate UPI payment URL with fixed UPI ID and the user-entered amount
-                const paymentUrl = `upi://pay?pa=${artistUpiId}&pn=Artist&mc=123456&tid=001&amt=${amount}&cu=INR`;
+                const paymentUrl = `upi://pay?pa=${artistUpiId}&pn={name}&mc=123456&tid=001&amt=${amount}&cu=INR`;
 
                 // Redirect to the UPI payment app
                 window.location.href = paymentUrl;
