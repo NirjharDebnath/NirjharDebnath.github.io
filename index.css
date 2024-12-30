@@ -73,17 +73,18 @@ body {
 .block a {
     display: block;
     width: 100%;
-    padding: 15px 20px;
+    /* padding: 15px 20px; */
     background-color: rgba(0, 0, 0, 1);
     color: rgb(0, 0, 0);
-    text-align: left;
+    text-align: justify;
     text-decoration: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: none;
     margin-top: 0px;
     transition: background-color 0.3s ease;
+    flex: 0;
     /* box-sizing: border-box; Ensures padding is included in the width */
 }
 
