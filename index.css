@@ -134,7 +134,7 @@ body {
     }
 }
 .footer-section:first-child {
-    margin-right: 10px; /*Adjust this value for a larger gap*/
+    margin-right: 100px; /*Adjust this value for a larger gap*/
 }
 
 .footer-section:nth-child(3) {
