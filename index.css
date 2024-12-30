@@ -82,7 +82,7 @@ body {
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    margin-top: auto; /* Push the button to the bottom */
+    margin-top: 10px; /* Push the button to the bottom */
     transition: background-color 0.3s ease;
     box-sizing: border-box; /* Ensures padding is included in the width */
 }
@@ -106,6 +106,7 @@ body {
 
 .back a {
     color: White;
+    text-align: center;
     padding: 20px 40px;
     max-width: 500px;
     margin: auto;
