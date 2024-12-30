@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    color: white;
     /*background: linear-gradient(90deg, #dae8fa, #ffe4f8);*/
     background: linear-gradient(135deg, #000000, #4B0082);
 }
@@ -18,7 +18,7 @@ body {
 .container {
     color: black;
     padding: 50px;
-    background: radial-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(218, 233, 255, 0.5) 100%);
+    background: radial-gradient(rgba(255, 255, 255, 1) 0%, rgba(218, 233, 255, 0.5) 100%);
     border-radius: 15px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(15px);
