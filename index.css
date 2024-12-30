@@ -88,7 +88,7 @@ body {
 }
 
 .back a {
-    padding: 20px 40px;
+    /* padding: 20px 40px; */
     max-width: 500px;
     margin: auto;
 }
