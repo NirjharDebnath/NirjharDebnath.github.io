@@ -87,7 +87,7 @@ body {
     box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
-.back a {
+/* .back a {
     padding: 20px 40px;
     max-width: 500px;
     margin: auto;
@@ -95,7 +95,7 @@ body {
 
 .block a {
     background-color: rgb(21, 58, 124); /* Slightly lighter background on hover */
-}
+} */
 
 
 /* Responsive Layout */
