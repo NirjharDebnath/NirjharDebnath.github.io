@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artist Payment - UPI</title>
-  <link rel="stylesheet" href="Pay.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Payment</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="payment-container">
-    <h1>Support the Artist</h1>
-    <p>Make a payment via UPI</p>
-    <form id="upi-payment-form">
-      <div class="form-group">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-      </div>
-      <div class="form-group">
-        <label for="upi-id">Enter UPI ID:</label>
-        <input type="text" id="upi-id" name="upi-id" placeholder="example@upi" required>
-      </div>
-      <div class="form-group">
-        <label for="amount">Payment Amount (INR):</label>
-        <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
-      </div>
-      <button type="submit">Pay via UPI</button>
-    </form>
-  </div>
+    <div class="payment-container">
+        <div class="block">
+            <h2>Pay to Artist</h2>
+            <p>Enter the details below to make the payment</p>
 
-  <script>
-    document.getElementById('upi-payment-form').addEventListener('submit', function (event) {
-      event.preventDefault();
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="upi-id">Artist's UPI ID</label>
+                    <input type="text" id="upi-id" placeholder="artist@upi" required>
+                </div>
 
-      const upiId = document.getElementById('upi-id').value;
-      const amount = document.getElementById('amount').value;
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" placeholder="Enter amount in INR" required>
+                </div>
 
-      // Construct UPI payment URI
-      const upiUri = `upi://pay?pa=${upiId}&pn=ArtistName&mc=0000&tid=1234567890&tr=txn12345&tn=Payment%20for%20artwork&am=${amount}&cu=INR`;
+                <button type="submit">Pay via UPI</button>
+            </form>
+        </div>
+    </div>
 
-      // Redirect to UPI app
-      window.location.href = upiUri;
-    });
-  </script>
+    <script>
+        document.getElementById('payment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const upiId = document.getElementById('upi-id').value;
+            const amount = document.getElementById('amount').value;
+
+            if (upiId && amount) {
+                // Redirect to UPI app for payment
+                const paymentUrl = `upi://pay?pa=${nirjhardebnath2006@oksbi}&pn=Nirjhar Debnath&mc=123456&tid=001&amt=${amount}&cu=INR&url=https://example.com`;
+
+                // Open the UPI payment app (user's UPI app will open with the details)
+                window.location.href = paymentUrl;
+            } else {
+                alert('Please enter both UPI ID and amount.');
+            }
+        });
+    </script>
 </body>
 </html>
