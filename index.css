@@ -105,6 +105,7 @@ body {
 }
 
 .back a {
+    color: White;
     padding: 20px 40px;
     max-width: 500px;
     margin: auto;
