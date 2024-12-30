@@ -34,7 +34,7 @@
 
             if (amount && amount > 0) {
                 // Generate UPI payment URL with fixed UPI ID and the user-entered amount
-                const paymentUrl = `upi://pay?pa=${artistUpiId}&pn=Artist&mc=123456&tid=001&amt=${amount}&cu=INR;
+                const paymentUrl = `upi://pay?pa=${artistUpiId}&pn=Artist&mc=123456&tid=001&amt=${amount}&cu=INR`;
 
                 // Redirect to the UPI payment app
                 window.location.href = paymentUrl;
@@ -43,5 +43,6 @@
             }
         });
     </script>
+
 </body>
 </html>
