@@ -1,1 +1,197 @@
+body {
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    background: linear-gradient(135deg, rgb(40, 1, 95), rgb(0, 0, 0));
+    background-size: 200% 200%;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.school-logo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.wbbse-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.school-name {
+    color: #ffffff;
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.affiliation {
+    color: #ffffff;
+    font-size: 16px;
+    display: flex; /* Flexbox layout for horizontal alignment */
+    align-items: center; /* Vertically align items in the center */
+    justify-content: center; /* Horizontally align content */
+}
+
+/* Modify colors for the navigation links */
+#navLinks {
+    background-color: #E8F2FF; /* Different background color for the nav links */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Menu Styles */
+nav {
+    margin-top: 50px;
+}
+
+nav a {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    border: none;
+    color: #ffffff;
+}
+
+/* Side Menu Styles */
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #E8F2FF;
+    padding-top: 20px;
+    z-index: 20;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: left 1s ease; /* Smooth sliding effect */
+}
+
+.side-panel.open {
+    left: 0; /* Slide in from the left */
+}
+
+/* Side Menu Links */
+.side-panel a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+.side-panel.open a {
+    opacity: 1; /* Fade in links when the menu is open */
+}
+
+
+/* Smooth transition for hamburger menu */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.menu-toggle {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-bottom: 40px; /* Add space below the close button */
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .header-container {
+        display: block;
+        text-align: center;
+    }
+
+    .school-logo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px;
+    }
+
+    .wbbse-logo {
+        width: 20px;
+        height: 20px;
+        margin-right: 4px;
+    }
+
+    .school-name {
+        font-size: 22px;
+    }
+
+    .affiliation {
+        font-size: 10px;
+    }
+
+    /* Display the hamburger menu on small screens */
+    .menu-toggle {
+        display: block;
+        margin-top: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.open {
+        display: block;
+        text-align: left;
+        margin-top: 20px;
+    }
+}
