@@ -70,7 +70,7 @@ body {
     display: block;
 }
 
-.block p {
+.block a {
     display: block;
     width: 100%;
     padding: 15px 20px;
