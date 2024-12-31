@@ -23,8 +23,8 @@ h2 {
 
 /* Payment Container */
 .payment-container {
-    width: 100%;
-    max-width: 400px;
+    width: auto;
+/*     max-width: 400px; */
     height: 500px; /* Predefined height for wider screens */
     padding: 50px;
     background: radial-gradient(circle, rgb(0, 0, 0), #000000);
