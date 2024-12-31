@@ -9,9 +9,6 @@
 <body>
     <div class="payment-container">
         <h2>Pay to Artist</h2>
-        <h3>Scan to Pay</h3>
-         
-
         <p>Enter the amount to make the payment</p>
 
         <form id="payment-form">
@@ -19,27 +16,37 @@
             <input type="number" id="amount" placeholder="Enter amount in INR" required>
             <button type="submit">Pay via UPI</button>
         </form>
+
+        <div id="qr-container" style="display: none; margin-top: 30px; text-align: center;">
+            <h3>Or Scan to Pay</h3>
+            <img id="qr-code" src="" alt="QR Code" style="margin-top: 10px; width: 200px; height: 200px;">
+        </div>
     </div>
+
     <script>
-        document.getElementById('payment-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+        document.getElementById('payment-form').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    const amount = document.getElementById('amount').value; // User-specified amount
-    const artistUpiId = 'nirmaldebnath75@oksbi'; // Replace with the artist's UPI ID
-    const payeeName = 'Nirmal Debnath'; // Replace with the artist's name
-    const transactionNote = 'Support Your Favorite Artist';
+            const amount = document.getElementById('amount').value; // User-specified amount
+            const artistUpiId = 'nirmaldebnath75@oksbi'; // Replace with the artist's UPI ID
+            const payeeName = 'Nirmal Debnath'; // Replace with the artist's name
+            const transactionNote = 'Support Your Favorite Artist';
 
-    if (amount && amount > 0) {
-        const paymentUrl = `upi://pay?pa=${artistUpiId}&pn=${payeeName}&tn=${transactionNote}&am=${amount}&cu=INR`;
+            if (amount && amount > 0) {
+                const paymentUrl = `upi://pay?pa=${artistUpiId}&pn=${payeeName}&tn=${transactionNote}&am=${amount}&cu=INR`;
 
-        // Redirect to UPI payment app
-        window.location.href = paymentUrl;
-    } else {
-        alert('Please enter a valid amount.');
-    }
-});
+                // Redirect to UPI payment app
+                window.location.href = paymentUrl;
 
+                // Generate and display QR code
+                const qrCodeImg = document.getElementById('qr-code');
+                const qrContainer = document.getElementById('qr-container');
+                qrCodeImg.src = `https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=${encodeURIComponent(paymentUrl)}`;
+                qrContainer.style.display = 'block';
+            } else {
+                alert('Please enter a valid amount.');
+            }
+        });
     </script>
-
 </body>
 </html>
