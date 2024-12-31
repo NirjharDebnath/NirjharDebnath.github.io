@@ -16,6 +16,7 @@ footer {
 
 .footer-bottom {
     display: flex;
+    border: 1px solid rgb(165, 135, 255, 1);
     justify-content: center; /* Center text horizontally */
     align-items: center; /* Center text vertically */
     min-height: 100px; /* Optional: adjust height to ensure proper centering */
