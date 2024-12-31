@@ -4,12 +4,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(135deg, #dae8fa, #ffe4f8);
+    background: linear-gradient(90deg, #000000, #2a0047);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #333;
+    color: #eaa4f8;
 }
 
 h2 {
@@ -23,14 +23,24 @@ h2 {
 .payment-container {
     width: 100%;
     max-width: 400px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    height: 500px; /* Predefined height for wider screens */
+    padding: 50px;
+    background: radial-gradient(circle, rgb(0, 0, 0), #000000);
+    border-radius: 15px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-container:hover{
+    transform:translateY(-10px);
+    box-shadow: 0 0px 30px rgb(165, 135, 255, 1);
 }
 
 /* QR Code Container */

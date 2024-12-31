@@ -4,9 +4,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
+    color: linear-gradient(135deg, #e299ff, #4a54e6);
     /*background: linear-gradient(90deg, #dae8fa, #ffe4f8);*/
-    background: linear-gradient(135deg, #000000, #4B0082);
+    background: linear-gradient(90deg, #000000f1, #2a0047);
 }
 
 .content {
@@ -14,6 +14,15 @@ body {
     flex-direction: column;
     gap: 40px;
     padding: 40px;
+    
+}
+
+.content h1 {
+    color: rgb(233, 161, 255);
+}
+
+.content p {
+    color: white;
 }
 
 .row {
@@ -29,7 +38,7 @@ body {
     max-width: 600px;
     height: 400px; /* Predefined height for wider screens */
     padding: 50px;
-    background: radial-gradient(circle, white, #4B0082);
+    background: radial-gradient(circle, white, #c784f7);
     border-radius: 15px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(15px);
@@ -47,13 +56,22 @@ body {
     box-shadow: 0 0px 30px rgb(165, 135, 255, 1);
 }
 
+ 
+block h2 {
+    font-size: 32px;
+    text-align: left;
+    font-weight: bold;
+    color: linear-gradient(135deg, #e297ff, #4a54e6);
+    margin-top: 24px;
+    margin-bottom: 0;
+}
+
 .block h2 {
     font-size: 32px;
     text-align: left;
     font-weight: bold;
-    color: #000000;
-    margin-top: 24px;
-    margin-bottom: 0;
+    color: linear-gradient(135deg, #e297ff, #4a54e6);
+    text-shadow: rgb(255, 255, 255);
 }
 
 .block p {
@@ -64,7 +82,7 @@ body {
     flex: 0; /* Prevents the paragraph from taking unnecessary space */
 }
 
-.dd img {
+.block img {
     height: 200px;
     width: 200px;  
     border-radius: 10px;
@@ -75,8 +93,6 @@ body {
 .block a {
     display: block;
     width: 100%;
-    /* padding: 15px 20px; */
-    padding: auto;
     background-color: rgba(0, 0, 0, 1);
     color: rgb(0, 0, 0);
     text-align: justify;
@@ -85,7 +101,6 @@ body {
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    margin-top: 0px;
     transition: background-color 0.3s ease;
     flex: 0;
     box-sizing: border-box; /*Ensures padding is included in the width*/
@@ -95,7 +110,7 @@ body {
     display: block;
     width: 100%;
     /* padding: 15px 20px; */
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgb(243, 181, 255);
     color: rgb(0, 0, 0);
     text-align: left;
     text-decoration: none;
@@ -109,7 +124,7 @@ body {
 }
 
 .back a {
-    color: White;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px 40px;
     max-width: 500px;
@@ -172,7 +187,7 @@ body {
 .footer-section p a {
     background: transparent;
     text-decoration: none;
-    fonth-size: 10px;
+    font-size: 10px;
     color: black;
 }
 
@@ -185,9 +200,13 @@ body {
     .content {
         padding:20px;
     }
+
+    .content h1 {
+        font-size: 24px;
+    }
     
     .block {
-        padding: 40px;
+        padding: 30px;
         max-width: 100%;
         height: 400px; /* Smaller height for small screens */
     }
@@ -202,17 +221,14 @@ body {
         text-align: left;
     }
 
-    .dd img {
+    .block img {
         height: 120px;
         width: 120px;
         margin: auto auto;
     }
 
     .block a {
-        width: 100%; /* Full width within the block */
-        font-size: 14px;
-        padding: 12px 18px; /* Consistent padding for smaller screens */
-        margin-top: auto; /* Keeps the button aligned at the bottom */
+        font-size: 12px;
     }
 
     .back a {

@@ -8,9 +8,9 @@ header {
     display: flex;
     justify-content: center; /* Centers content horizontally */
     align-items: center; /* Centers content vertically */
-    background: linear-gradient(135deg, rgb(40, 1, 95), rgb(0, 0, 0));
+    background: linear-gradient(270deg, #000000, #0d0016);
     background-size: 200% 200%;
-    color: #fff;
+    color: #ce64ff;
     padding: 20px;
     text-align: center;
     position: relative;
@@ -35,14 +35,14 @@ header {
 }
 
 .school-name {
-    color: #ffffff;
+    color: rgb(245, 185, 253);
     font-size: 46px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .affiliation {
-    color: #ffffff;
+    color: #d5d0ff;
     font-size: 16px;
     display: flex; /* Flexbox layout for horizontal alignment */
     align-items: center; /* Vertically align items in the center */
@@ -51,7 +51,7 @@ header {
 
 /* Modify colors for the navigation links */
 #navLinks {
-    background-color: #E8F2FF; /* Different background color for the nav links */
+    background-color: #bdc4ff; /* Different background color for the nav links */
     padding: 10px 20px;
     border-radius: 10px;
 }

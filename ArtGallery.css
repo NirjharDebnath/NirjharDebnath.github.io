@@ -5,7 +5,7 @@ body {
     box-sizing: border-box;
     color: white;
     /*background: linear-gradient(90deg, #dae8fa, #ffe4f8);*/
-    background: linear-gradient(135deg, #000000, #4B0082);
+    background: linear-gradient(90deg, #000000, #2a0047);
 }
 
 .content {
@@ -16,9 +16,9 @@ body {
 }
 
 .container {
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 50px;
-    background: radial-gradient(rgba(218, 233, 255, 0.5) 0%, rgba(218, 233, 255, 0.5) 100%);
+    background: radial-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
     border-radius: 15px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(15px);
@@ -33,7 +33,7 @@ body {
 }
 
 .container img {
-    aspect-ratio: 16/9;
+    aspect-ratio: 1/1   ;
     object-fit: cover;
     width: 100%;
     border-radius: 10px;
@@ -44,6 +44,7 @@ body {
 
 .container:hover {
     box-shadow: 0 0px 30px rgb(165, 135, 255, 1);
+    border: 1px solid rgb(165, 135, 255, 1);
 }
 
 @media (max-width: 767px) {
