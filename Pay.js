@@ -8,7 +8,9 @@ document.getElementById('payment-form').addEventListener('submit', function(e) {
 
     if (amount && amount > 0) {
         // Generate UPI payment URL
-        const paymentUrl = `upi://pay?pa=${encodeURIComponent(artistUpiId)}&pn=${encodeURIComponent('Artist')}&am=${encodeURIComponent(amount)}&cu=INR`;
+        const paymentUrl = `upi://pay?pa=${artistUpiId}&pn=Artist&am=${amount}&cu=INR`;
+        const qrCodeData = `upi://pay?pa=${artistUpiId}&pn=Artist&am=${amount}&cu=INR`;
+        const qrCode = new QRCode(document.getElementById("qrcode"), qrCodeData);
 
 
         // Redirect to the UPI payment app
