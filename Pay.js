@@ -1,12 +1,19 @@
-// document.getElementById('upi-payment-form').addEventListener('submit', function (event) {
-//     event.preventDefault();
+// Fixed UPI ID for the artist (Replace with the actual UPI ID)
+const artistUpiId = 'nirmaldebnath75@oksbi';  
 
-//     const upiId = document.getElementById('upi-id').value;
-//     const amount = document.getElementById('amount').value;
+document.getElementById('payment-form').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-//     // Construct UPI payment URI
-//     const upiUri = `upi://pay?pa=${upiId}&pn=ArtistName&mc=0000&tid=1234567890&tr=txn12345&tn=Payment%20for%20artwork&am=${amount}&cu=INR`;
+    const amount = document.getElementById('amount').value;
 
-//     // Redirect to UPI app
-//     window.location.href = upiUri;
-// // Initialize EmailJS
+    if (amount && amount > 0) {
+        // Generate UPI payment URL
+       const paymentUrl = `upi://pay?pa=${encodeURIComponent(artistUpiId)}&pn=${encodeURIComponent('Artist')}&am=${encodeURIComponent(amount)}&cu=INR`;
+
+
+        // Redirect to the UPI payment app
+        window.location.href = paymentUrl;
+    } else {
+        alert('Please enter a valid amount.');
+    }
+});
