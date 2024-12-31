@@ -12,6 +12,11 @@ body {
     color: #333;
 }
 
+.payment-container img {
+    height: auto;
+    width: auto;
+}
+
 h2 {
     font-size: 28px;
     font-weight: 600;
