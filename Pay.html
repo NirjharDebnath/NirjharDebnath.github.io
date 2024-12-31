@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +9,24 @@
 <body>
     <div class="payment-container">
         <h2>Pay to Artist</h2>
-        <p>Enter the amount to make the payment</p>
+        <p>Enter the amount to generate a QR code or pay via UPI app.</p>
 
         <form id="payment-form">
             <label for="amount">Amount (INR):</label>
             <input type="number" id="amount" placeholder="Enter amount in INR" required>
-            <button type="submit">Pay via UPI</button>
+            <button type="button" onclick="generateQRCode()">Generate QR Code</button>
         </form>
 
         <div id="qr-container" style="display: none; margin-top: 30px; text-align: center;">
-            <h3>Or Scan to Pay</h3>
+            <h3>Scan to Pay</h3>
             <img id="qr-code" src="" alt="QR Code" style="margin-top: 10px; width: 200px; height: 200px;">
+            <p style="margin-top: 10px;">OR</p>
+            <button id="upi-app-button" style="margin-top: 10px;">Pay via UPI App</button>
         </div>
     </div>
 
-    
     <script>
-        document.getElementById('payment-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-
+        function generateQRCode() {
             const amount = document.getElementById('amount').value; // User-specified amount
             const artistUpiId = 'nirmaldebnath75@oksbi'; // Replace with the artist's UPI ID
             const payeeName = 'Nirmal Debnath'; // Replace with the artist's name
@@ -37,18 +35,21 @@
             if (amount && amount > 0) {
                 const paymentUrl = `upi://pay?pa=${artistUpiId}&pn=${payeeName}&tn=${transactionNote}&am=${amount}&cu=INR`;
 
-                // Redirect to UPI payment app
-                window.location.href = paymentUrl;
-
-                // Generate and display QR code
+                // Display QR Code
                 const qrCodeImg = document.getElementById('qr-code');
                 const qrContainer = document.getElementById('qr-container');
                 qrCodeImg.src = `https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=${encodeURIComponent(paymentUrl)}`;
                 qrContainer.style.display = 'block';
+
+                // Update the "Pay via UPI App" button
+                const upiAppButton = document.getElementById('upi-app-button');
+                upiAppButton.onclick = () => {
+                    window.location.href = paymentUrl;
+                };
             } else {
                 alert('Please enter a valid amount.');
             }
-        });
+        }
     </script>
 </body>
 </html>
