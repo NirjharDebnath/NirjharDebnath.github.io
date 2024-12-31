@@ -12,11 +12,6 @@ body {
     color: #333;
 }
 
-.payment-container img {
-    height: auto;
-    width: auto;
-}
-
 h2 {
     font-size: 28px;
     font-weight: 600;
@@ -24,17 +19,11 @@ h2 {
     text-align: center;
 }
 
-p {
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-/* Payment Form Container */
+/* Payment Container */
 .payment-container {
     width: 100%;
-    max-width: 500px;
-    padding: 30px;
+    max-width: 400px;
+    padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -44,67 +33,19 @@ p {
     align-items: center;
 }
 
-/* Form Styling */
-form {
-    width: 100%;
+/* QR Code Container */
+.qr-container {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-label {
-    font-size: 16px;
-    font-weight: 500;
-}
-
-input[type="number"] {
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-input[type="number"]:focus {
-    border-color: #5c6bc0;
-}
-
-button {
-    background-color: #5c6bc0;
-    color: white;
-    padding: 12px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #3f4a91;
-}
-
-button:active {
-    background-color: #334c80;
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-    h2 {
-        font-size: 24px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .payment-container {
-        padding: 20px;
-    }
-
-    input[type="number"], button {
-        font-size: 14px;
-        padding: 10px;
-    }
+.qr-code {
+    max-width: 250px; /* Limiting the max width of the QR code */
+    width: 100%;
+    height: auto;
+    border: 2px solid #ddd; /* Adding a slight border for a clean look */
+    border-radius: 10px;
+    padding: 10px;
 }
