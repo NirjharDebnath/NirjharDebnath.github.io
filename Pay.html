@@ -38,7 +38,7 @@
                 // Display QR Code
                 const qrCodeImg = document.getElementById('qr-code');
                 const qrContainer = document.getElementById('qr-container');
-                qrCodeImg.src = `https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=${encodeURIComponent(paymentUrl)}`;
+                qrCodeImg.src = `https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=${paymentUrl}`;
                 qrContainer.style.display = 'block';
 
                 // Update the "Pay via UPI App" button
