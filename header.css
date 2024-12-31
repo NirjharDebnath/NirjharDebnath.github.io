@@ -91,7 +91,7 @@ nav a:hover {
     left: -250px; /* Initially hidden off-screen */
     width: 250px;
     height: 100%;
-    background-color: #E8F2FF;
+    background: linear-gradient(270deg, #000000, #0d0016);
     padding-top: 20px;
     z-index: 20;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
@@ -108,7 +108,7 @@ nav a:hover {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-size: 16px;
     margin-top: 10px;
 }
@@ -126,7 +126,7 @@ nav a:hover {
     font-size: 30px;
     background: none;
     border: none;
-    color: #fff;
+    color: #ffffff;
 }
 
 .menu-toggle {
@@ -143,7 +143,7 @@ nav a:hover {
 /* Close Button */
 .close-btn {
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     background: none;
     border: none;
     position: absolute;
