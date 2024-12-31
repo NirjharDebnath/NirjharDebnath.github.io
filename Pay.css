@@ -81,6 +81,7 @@ h2 {
 
 .back a {
     color: rgb(255, 255, 255);
+    border: none;
     box-shadow: 0 0px 10px rgb(187, 144, 255);
     text-align: center;
     padding: 20px 40px;
