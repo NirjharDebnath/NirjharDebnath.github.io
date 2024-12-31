@@ -9,6 +9,7 @@ body {
 footer {
     background: linear-gradient(270deg, #000000, #0d0016);
     background-size: 100% 100%;
+    border: 1px solid rgb(165, 135, 255, 1);
     width: 100%;
     text-align: center; /* Center text horizontally */
 }
