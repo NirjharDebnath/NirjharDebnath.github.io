@@ -17,8 +17,11 @@ body {
     
 }
 
-.content h1 {
-    color: rgb(233, 161, 255);
+.content h2 {
+    font-size: 60px;
+    text-align: center; 
+    margin-bottom: 0; 
+    color: rgb(245, 214, 255);
 }
 
 .content p {
@@ -38,7 +41,7 @@ body {
     max-width: 600px;
     height: 400px; /* Predefined height for wider screens */
     padding: 50px;
-    background: radial-gradient(circle, white, #c784f7);
+    background: linear-gradient(90deg, #000000f1, #2a0047);
     border-radius: 15px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(15px);
@@ -49,15 +52,17 @@ body {
     text-align: center;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0px 30px rgb(165, 135, 255, 1);
 }
 
 .block:hover {
     transform:translateY(-10px);
-    box-shadow: 0 0px 30px rgb(165, 135, 255, 1);
+
 }
 
  
 block h2 {
+    color: white;
     font-size: 32px;
     text-align: left;
     font-weight: bold;
@@ -70,7 +75,7 @@ block h2 {
     font-size: 32px;
     text-align: left;
     font-weight: bold;
-    color: linear-gradient(135deg, #e297ff, #4a54e6);
+    color: white;
     text-shadow: rgb(255, 255, 255);
 }
 
@@ -78,7 +83,7 @@ block h2 {
     text-align: justify;
     font-size: 18px;
     line-height: 1.6;
-    color: #000000;
+    color: hsl(238, 100%, 94%);
     flex: 0; /* Prevents the paragraph from taking unnecessary space */
 }
 
@@ -94,12 +99,12 @@ block h2 {
     display: block;
     width: 100%;
     background-color: rgba(0, 0, 0, 1);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: justify;
     text-decoration: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     transition: background-color 0.3s ease;
     flex: 0;
@@ -110,8 +115,8 @@ block h2 {
     display: block;
     width: 100%;
     /* padding: 15px 20px; */
-    background-color: rgb(243, 181, 255);
-    color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: left;
     text-decoration: none;
     border-radius: 8px;
@@ -124,7 +129,8 @@ block h2 {
 }
 
 .back a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgb(187, 144, 255);
     text-align: center;
     padding: 20px 40px;
     max-width: 500px;
@@ -146,8 +152,15 @@ block h2 {
         flex: 1 1 calc(50% - 30px);
     }
 
+    .content h1 {
+        font-size: 24px;
+    }
+
     .block {
         height: 600px; /* Taller blocks for wider screens */
+    }
+    .block a {
+        font-size: 20px;
     }
 }
 .footer-section:first-child {
@@ -201,8 +214,8 @@ block h2 {
         padding:20px;
     }
 
-    .content h1 {
-        font-size: 24px;
+    .content h2 {
+        font-size: 40px;
     }
     
     .block {
@@ -228,7 +241,7 @@ block h2 {
     }
 
     .block a {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .back a {
