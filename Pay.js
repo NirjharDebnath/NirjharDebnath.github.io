@@ -8,7 +8,7 @@ document.getElementById('payment-form').addEventListener('submit', function(e) {
 
     if (amount && amount > 0) {
         // Generate UPI payment URL
-       const paymentUrl = `upi://pay?pa=${encodeURIComponent(artistUpiId)}&pn=${encodeURIComponent('Artist')}&am=${encodeURIComponent(amount)}&cu=INR`;
+        const paymentUrl = `upi://pay?pa=${encodeURIComponent(artistUpiId)}&pn=${encodeURIComponent('Artist')}&am=${encodeURIComponent(amount)}&cu=INR`;
 
 
         // Redirect to the UPI payment app
