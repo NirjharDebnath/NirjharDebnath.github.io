@@ -58,6 +58,7 @@ body {
 
 .block:hover {
     transform:translateY(-10px);
+    box-shadow: 0px 0px 30px rgba(165, 135, 255, 1);
 
 }
 
