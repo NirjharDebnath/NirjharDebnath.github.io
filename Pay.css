@@ -46,6 +46,11 @@ h2 {
     box-shadow: 0 0px 30px rgb(165, 135, 255, 1);
 }
 
+.payment-container p {
+    text-align: justify;
+    color: white;
+    padding: 20px;
+}
 /* QR Code Container */
 .qr-container {
     display: flex;
