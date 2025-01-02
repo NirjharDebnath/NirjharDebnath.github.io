@@ -25,7 +25,7 @@ h2 {
 .payment-container {
     width: fit-content;
     border: 1px solid rgb(165, 135, 255, 1);
-    height: fit-content; /* Predefined height for wider screens */
+    height: 640px; /* Predefined height for wider screens */
     padding: 50px;
     margin: 20px;
     margin-top: 40px;
