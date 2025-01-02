@@ -8,7 +8,8 @@ header {
     display: flex;
     justify-content: center; /* Centers content horizontally */
     align-items: center; /* Centers content vertically */
-    background: linear-gradient(270deg, #000000, #0d0016);
+    /*background: linear-gradient(270deg, #000000, #0d0016);*/
+    background: linear-gradient(270deg, #000000, #2a0047);
     background-size: 200% 200%;
     color: #ce64ff;
     padding: 20px;
