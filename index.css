@@ -41,7 +41,7 @@ body {
     max-width: 600px;
     height: 400px; /* Predefined height for wider screens */
     padding: 50px;
-    background: linear-gradient(90deg, #000000f1, #2a0047);
+    background: linear-gradient(270deg, #000000, #0d0016);
     border-radius: 15px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(15px);
