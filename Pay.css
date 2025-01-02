@@ -25,7 +25,7 @@ h2 {
 .payment-container {
     width: fit-content;
     border: 1px solid rgb(165, 135, 255, 1);
-    height: 640px; /* Predefined height for wider screens */
+    height: 500px; /* Predefined height for wider screens */
     padding: 50px;
     margin: 20px;
     background: radial-gradient(circle, rgb(0, 0, 0), #000000);
