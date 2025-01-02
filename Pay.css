@@ -28,7 +28,6 @@ h2 {
     height: 640px; /* Predefined height for wider screens */
     padding: 50px;
     margin: 20px;
-    margin-top: 40px;
     background: radial-gradient(circle, rgb(0, 0, 0), #000000);
     border-radius: 15px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
