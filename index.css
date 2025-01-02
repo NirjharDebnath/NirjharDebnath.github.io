@@ -61,8 +61,14 @@ body {
 
 }
 
+.block img {
+    width: 200px;
+    height: 240px;
+}
+
  
-block h2 {
+.block h2 {
+
     color: white;
     font-size: 32px;
     text-align: left;
