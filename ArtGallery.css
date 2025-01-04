@@ -132,7 +132,7 @@ body {
     position: fixed; /* Fixed positioning */
     top: 20px; /* Distance from the top edge */
     right: 20px; /* Distance from the right edge */
-    background: black;
+    background: transparent;
     color: white;
     font-size: 24px;
     border: none;
