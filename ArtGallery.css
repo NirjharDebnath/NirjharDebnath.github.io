@@ -132,8 +132,8 @@ body {
     position: fixed; /* Fixed positioning */
     top: 20px; /* Distance from the top edge */
     right: 20px; /* Distance from the right edge */
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     font-size: 24px;
     border: none;
     border-radius: 50%;
